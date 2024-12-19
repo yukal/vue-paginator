@@ -21,7 +21,9 @@ var pagination = ref({
   limit: 15,
 });
 
-var items = ref(Array.from({ length: 300 }, (_, i) => i + 1));
+var items = ref(
+  Array.from({ length: 300 }, (_, i) => i + 1)
+);
 
 var paginationItems = computed(() => {
   return items.value.slice(
@@ -35,6 +37,14 @@ var selectPage = ({ offset }) => (
 ```
 
 ```html
+<!-- Itaration -->
+
+<tr v-for="item of paginationItems" :key="item">
+  <td>Name {{ item }}</td>
+  <td>Age {{ item }}</td>
+  <td>Address {{ item }}</td>
+</tr>
+
 <!-- Without Controls -->
 
 <Paginator @select="selectPage"
