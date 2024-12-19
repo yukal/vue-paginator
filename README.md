@@ -1,9 +1,11 @@
 # vue-paginator
-A paginator for VueJS based on vue-router
+A paginator for VueJS based on [vue-router](https://router.vuejs.org/) and [tailwind](https://tailwindcss.com/)
 
 ![vue-paginator](.github/paginator-sm.png)
 
 ### Structure
+
+![vue-paginator structure](.github/paginator-structure.png)
 
 <span style="color:green"> **&lt;** </span> <span style="color:greenyellow">(1)</span> <span style="color:gray">..</span> <span style="color:magenta"> 3 4 5</span> <span style="color:gray">..</span> <span style="color:greenyellow">(N)</span> <span style="color:green"> **&gt;** </span>
 
