@@ -37,7 +37,7 @@ var selectPage = ({ offset }) => (
 ```
 
 ```html
-<!-- Itaration -->
+<!-- Iteration -->
 
 <tr v-for="item of paginationItems" :key="item">
   <td>Name {{ item }}</td>
