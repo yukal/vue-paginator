@@ -58,4 +58,10 @@ var selectPage = ({ offset }) => (
     :page-range="3"
     :limit="pagination.limit"
     :total-items="items.length" />
+
+<!-- Responsive Paginator -->
+
+<PaginatorResponsive @select="selectPage"
+  :limit="pagination.limit"
+  :total-items="items.length" />
 ```

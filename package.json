@@ -13,7 +13,8 @@
     "vue",
     "vue-paginator",
     "tailwind",
-    "router"
+    "router",
+    "responsive"
   ],
   "author": "Alex Yu",
   "license": "MIT",

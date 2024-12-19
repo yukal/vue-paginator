@@ -3,6 +3,7 @@ import { ref, computed, onMounted } from 'vue';
 import { useRoute, useRouter, RouterView } from 'vue-router';
 
 import PaginatorControls from '@/components/PaginatorControls.vue';
+import PaginatorResponsive from '@/components/PaginatorResponsive.vue';
 import Paginator from '@/components/Paginator.vue';
 
 // const route = useRoute();
@@ -55,12 +56,19 @@ onMounted(async () => {
       </tbody>
     </table>
 
+    <!-- Without Controls -->
     <Paginator @select="selectPage"
       :page-range="5"
       :limit="pagination.limit"
       :total-items="items.length" />
 
+    <!-- With Controls -->
     <PaginatorControls @select="selectPage"
+      :limit="pagination.limit"
+      :total-items="items.length" />
+
+    <!-- Responsive Paginator -->
+    <PaginatorResponsive @select="selectPage"
       :limit="pagination.limit"
       :total-items="items.length" />
 
