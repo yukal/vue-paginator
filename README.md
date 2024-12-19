@@ -21,6 +21,14 @@ var pagination = ref({
   limit: 15,
 });
 
+var items = ref(Array.from({ length: 300 }, (_, i) => i + 1));
+
+var paginationItems = computed(() => {
+  return items.value.slice(
+    pagination.value.offset,
+    pagination.value.offset + pagination.value.limit);
+});
+
 var selectPage = ({ offset }) => (
   pagination.value.offset = offset;
 );
