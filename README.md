@@ -22,7 +22,7 @@ var pagination = ref({
 });
 
 var items = ref(
-  Array.from({ length: 300 }, (_, i) => i + 1)
+  Array.from({ length: 300 })
 );
 
 var paginationItems = computed(() => {
