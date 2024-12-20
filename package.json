@@ -1,0 +1,36 @@
+{
+  "name": "vue-paginator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 8181",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "paginator",
+    "vue",
+    "vue-paginator",
+    "tailwind",
+    "router",
+    "responsive"
+  ],
+  "author": "Alex Yu",
+  "license": "MIT",
+  "description": "A paginator for Vue 3 based on vue-router",
+  "dependencies": {
+    "@tailwindcss/forms": "^0.5.9",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.16",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vue/test-utils": "^2.4.6",
+    "jsdom": "^25.0.1",
+    "vite": "^5.4.11"
+  }
+}
