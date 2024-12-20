@@ -1,19 +1,17 @@
 # vue-paginator
 A paginator for VueJS based on [vue-router](https://router.vuejs.org/) and [tailwind](https://tailwindcss.com/)
 
-![vue-paginator](.github/paginator-sm.png)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset=".github/paginator-v1-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset=".github/paginator-v1-light.svg">
+  <img alt="vue-paginator responsive" src=".github/paginator-v1-light.svg">
+</picture>
 
-### Structure
-
-![vue-paginator structure](.github/paginator-structure.png)
-
-<span style="color:green"> **&lt;** </span> <span style="color:greenyellow">(1)</span> <span style="color:gray">..</span> <span style="color:magenta"> 3 4 5</span> <span style="color:gray">..</span> <span style="color:greenyellow">(N)</span> <span style="color:green"> **&gt;** </span>
-
-- <span style="color:green">Controls</span> (prev | next)
-
-- <span style="color:greenyellow">First</span> & <span style="color:greenyellow">Last</span> pages
-- <span style="color:magenta">Page Range</span> (3 or more elements)
-
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset=".github/paginator-v2-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset=".github/paginator-v2-light.svg">
+  <img alt="vue-paginator with controls" src=".github/paginator-v2-light.svg">
+</picture>
 
 ```js
 var pagination = ref({
@@ -65,3 +63,11 @@ var selectPage = ({ offset }) => (
   :limit="pagination.limit"
   :total-items="items.length" />
 ```
+
+### Structure
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset=".github/paginator-struct-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset=".github/paginator-struct-light.svg">
+  <img alt="vue-paginator structure" src=".github/paginator-struct-light.svg">
+</picture>

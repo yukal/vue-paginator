@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="600" height="400" viewBox="0 0 600 400" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" style="background-color:white">
+  <style>
+  .link {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    text-align: center;
+    text-anchor: middle;
+    fill-opacity: 1;
+    fill: #1d4ed8;
+  }
+  .sepr {
+    fill: #1f2937;
+    font-size: 13px;
+  }
+  .descr {
+    font-family: monospace;
+    font-weight: bold;
+    fill: #1f2937;
+    font-size: 15px;
+  }
+  .hint {
+    font-family: monospace;
+    fill: #808080;
+    font-size: 12px;
+  }
+  .norm {
+    font-family: monospace;
+    fill: #202020;
+    font-size: 12px;
+  }
+  .controls {
+    font-size: 16px;
+    fill: #1d4ed8;
+  }
+  .box-range {
+    fill: #dbeafe;
+  }
+  .box-ctrls {
+    stroke: #e0e0e0;
+    stroke-width: 2;
+    fill: none;
+  }
+  .box-static {
+    fill: #dcedd0;
+  }
+  line {
+    stroke-width: 1;
+    stroke: black;
+  }
+  </style>
+
+  <text xml:space="preserve" class="descr" x="300" y="82"
+    text-anchor="middle">Page Range</text>
+  <text xml:space="preserve" class="hint" x="300" y="102"
+    text-anchor="middle">(dynamic)</text>
+
+  <text xml:space="preserve" class="norm" x="138" y="140"
+    text-anchor="middle">first page</text>
+  <text xml:space="preserve" class="hint" x="138" y="157"
+    text-anchor="middle">(static)</text>
+
+  <text xml:space="preserve" class="norm" x="463" y="140"
+    text-anchor="middle">last page</text>
+  <text xml:space="preserve" class="hint" x="463" y="157"
+    text-anchor="middle">(static)</text>
+
+  <text xml:space="preserve" class="norm" x="174" y="248"
+    text-anchor="middle">break</text>
+  <text xml:space="preserve" class="hint" x="174" y="264"
+    text-anchor="middle">(hideable)</text>
+
+  <text xml:space="preserve" class="norm" x="429" y="248"
+    text-anchor="middle">break</text>
+  <text xml:space="preserve" class="hint" x="429" y="264"
+    text-anchor="middle">(hideable)</text>
+
+  <text xml:space="preserve" class="descr" x="300" y="295"
+    text-anchor="middle">Controls</text>
+  <text xml:space="preserve" class="hint" x="300" y="315"
+    text-anchor="middle">(disableable)</text>
+
+  <line x1="296" y1="118" x2="304" y2="118" />
+  <line x1="300" y1="118" x2="300" y2="170" />
+
+  <line x1="92" y1="238" x2="100" y2="238" />
+  <line x1="96" y1="238" x2="96" y2="290" />
+
+  <line x1="505" y1="238" x2="513" y2="238" />
+  <line x1="509" y1="238" x2="509" y2="290" />
+
+  <line x1="96" y1="290" x2="240" y2="290" />
+  <line x1="509" y1="290" x2="360" y2="290" />
+
+	<!-- <rect width="35" height="35" x="282.5" y="182.5" rx="5" ry="5" /> -->
+	<!-- <rect class="box-ctrls" width="68" height="35" x="89.5" y="182.5" /> -->
+	<rect class="box-ctrls" width="35" height="35" x="78" y="182.5" />
+	<rect class="box-static" width="35" height="35" x="122" y="182.5" />
+	<rect class="box-range" width="220" height="35" x="190" y="182.5" />
+	<rect class="box-static" width="35" height="35" x="446" y="182.5" />
+	<rect class="box-ctrls" width="35" height="35" x="491" y="182.5" />
+	<!-- <rect class="box-ctrls" width="68" height="35" x="442.5" y="182.5" /> -->
+
+	<text xml:space="preserve" class="link" x="304" y="204"
+    text-anchor="middle" word-spacing="20">1  13 14 15 16 17  30</text>
+
+  <text xml:space="preserve" class="sepr" x="300" y="204"
+    text-anchor="middle" word-spacing="238">… …</text>
+
+  <text xml:space="preserve" class="controls" x="302" y="204"
+    text-anchor="middle" word-spacing="132">‹   ›</text>
+
+</svg>
