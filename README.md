@@ -13,6 +13,12 @@ A paginator for VueJS based on [vue-router](https://router.vuejs.org/) and [tail
   <img alt="vue-paginator with controls" src=".github/paginator-v2-light.svg">
 </picture>
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset=".github/paginator-struct-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset=".github/paginator-struct-light.svg">
+  <img alt="vue-paginator structure" src=".github/paginator-struct-light.svg">
+</picture>
+
 ```js
 var pagination = ref({
   offset: 0,
@@ -63,11 +69,3 @@ var selectPage = ({ offset }) => (
   :limit="pagination.limit"
   :total-items="items.length" />
 ```
-
-### Structure
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset=".github/paginator-struct-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset=".github/paginator-struct-light.svg">
-  <img alt="vue-paginator structure" src=".github/paginator-struct-light.svg">
-</picture>
