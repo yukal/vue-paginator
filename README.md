@@ -2,10 +2,20 @@
 A paginator for VueJS based on [vue-router](https://router.vuejs.org/) and [tailwind](https://tailwindcss.com/)
 
 <picture>
+  <source media="(prefers-color-scheme: dark)" srcset=".github/paginator-struct-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset=".github/paginator-struct-light.svg">
+  <img alt="vue-paginator structure" src=".github/paginator-struct-light.svg">
+</picture>
+
+<br>
+
+<picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/paginator-v1-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset=".github/paginator-v1-light.svg">
   <img alt="vue-paginator responsive" src=".github/paginator-v1-light.svg">
 </picture>
+
+<br>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/paginator-v2-dark.svg">
@@ -13,11 +23,9 @@ A paginator for VueJS based on [vue-router](https://router.vuejs.org/) and [tail
   <img alt="vue-paginator with controls" src=".github/paginator-v2-light.svg">
 </picture>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset=".github/paginator-struct-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset=".github/paginator-struct-light.svg">
-  <img alt="vue-paginator structure" src=".github/paginator-struct-light.svg">
-</picture>
+<br>
+<br>
+
 
 ```js
 var pagination = ref({
