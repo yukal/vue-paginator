@@ -57,18 +57,22 @@ onMounted(async () => {
     </table>
 
     <!-- Without Controls -->
-    <Paginator @select="selectPage"
+    <Paginator @select="selectPage" class="paginator pgs-1"
       :page-range="5"
       :limit="pagination.limit"
       :total-items="items.length" />
 
     <!-- With Controls -->
-    <PaginatorControls @select="selectPage"
+    <PaginatorControls @select="selectPage" class="paginator pgs-2"
+      :limit="pagination.limit"
+      :total-items="items.length" />
+
+    <PaginatorControls @select="selectPage" class="paginator-4 pgs-4"
       :limit="pagination.limit"
       :total-items="items.length" />
 
     <!-- Responsive Paginator -->
-    <PaginatorResponsive @select="selectPage"
+    <PaginatorResponsive @select="selectPage" class="paginator pgs-3"
       :limit="pagination.limit"
       :total-items="items.length" />
 

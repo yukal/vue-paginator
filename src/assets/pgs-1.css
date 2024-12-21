@@ -1,0 +1,33 @@
+/* STYLE 1 */
+
+.pgs-1 .active {
+    @apply
+
+    text-sm text-gray-800
+
+    bg-blue-100
+    focus:bg-gray-300
+    disabled:opacity-50 disabled:pointer-events-none
+}
+
+.pgs-1 .link {
+    @apply
+
+    text-sm text-blue-700
+
+    hover:text-blue-500
+    disabled:opacity-50 disabled:pointer-events-none
+}
+
+.pgs-1 .control {
+    @apply
+
+    text-blue-700 text-lg
+
+    py-2 px-3.5
+    flex justify-center items-center
+
+    hover:text-blue-500 focus:outline-none
+    disabled:opacity-50 disabled:pointer-events-none
+    rounded-lg
+}

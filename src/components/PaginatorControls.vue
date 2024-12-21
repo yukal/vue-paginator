@@ -114,37 +114,34 @@ watch(() => route.query[props.pageArgument], (newPageNum) => {
 </script>
 
 <template>
-  <nav class="flex justify-center items-center gap-x-2 font-mono my-4" aria-label="Pagination">
-    <RouterLink v-if="pageNum >= 2" :to="toPageNum(pageNum - 1)"
-      class="py-2 px-2 flex justify-center items-center text-blue-700 hover:text-blue-500 text-lg rounded-lg focus:outline-none disabled:opacity-50 disabled:pointer-events-none">
+  <nav aria-label="Pagination">
+    <RouterLink v-if="pageNum >= 2" :to="toPageNum(pageNum - 1)" class="control">
       {{ textPrev }}
     </RouterLink>
 
-    <span v-else class="py-2 px-2 flex justify-center items-center text-blue-700 text-lg opacity-50">
+    <span v-else class="control disabled">
       {{ textPrev }}
     </span>
 
     <template v-for="page in pages">
-      <span v-if="page === -1" class="py-2 flex justify-center items-center text-slate-500">
+      <span v-if="page === -1" class="separator">
         {{ separatorText }}
       </span>
 
       <span v-else-if="page === pageNum"
-        class="py-2 px-3 flex justify-center items-center bg-gray-200 text-gray-800 text-sm rounded-lg focus:outline-none focus:bg-gray-300 disabled:opacity-50 disabled:pointer-events-none"
+        class="active"
         :tabindex="page" :aria-current="page">{{ page }}</span>
 
       <RouterLink v-else :to="toPageNum(page)"
-        class="py-2 px-3 flex justify-center items-center text-blue-700 hover:text-blue-500 text-sm rounded-lg focus:outline-none disabled:opacity-50 disabled:pointer-events-none"
+        class="link"
         :tabindex="page" :aria-current="page">{{ page }}</RouterLink>
     </template>
 
-    <span v-if="pageNum >= totalPages"
-      class="py-2 px-2 flex justify-center items-center text-blue-700 text-lg opacity-50">
+    <span v-if="pageNum >= totalPages" class="control disabled">
       {{ textNext }}
     </span>
 
-    <RouterLink v-else :to="toPageNum(pageNum + 1)"
-      class="py-2 px-2 flex justify-center items-center text-blue-700 hover:text-blue-500 text-lg rounded-lg focus:outline-none disabled:opacity-50 disabled:pointer-events-none">
+    <RouterLink v-else :to="toPageNum(pageNum + 1)" class="control">
       {{ textNext }}
     </RouterLink>
   </nav>
