@@ -1,5 +1,5 @@
 # vue-paginator
-A paginator for VueJS based on [vue-router](https://router.vuejs.org/) and [tailwind](https://tailwindcss.com/)
+A responsive paginator for Vue 3 based on [vue-router](https://router.vuejs.org/) and [tailwind](https://tailwindcss.com/). See demo at [stackblitz](https://stackblitz.com/edit/vue-paginator?file=src%2Fviews%2FHome.vue).
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/paginator-struct-dark.svg">
