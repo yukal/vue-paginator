@@ -1,4 +1,9 @@
 import './assets/main.css';
+import './assets/paginator.css';
+import './assets/pgs-1.css';
+import './assets/pgs-2.css';
+import './assets/pgs-3.css';
+import './assets/pgs-4.css';
 
 import { createApp } from 'vue';
 

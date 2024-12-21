@@ -26,6 +26,7 @@ A responsive paginator for Vue 3 based on [vue-router](https://router.vuejs.org/
 <br>
 <br>
 
+### Usage
 
 ```js
 var pagination = ref({
@@ -56,24 +57,39 @@ var selectPage = ({ offset }) => (
   <td>Age {{ item }}</td>
   <td>Address {{ item }}</td>
 </tr>
+```
 
-<!-- Without Controls -->
+#### Without Controls, and 5 range elements
 
+```html
 <Paginator @select="selectPage"
     :page-range="5"
     :limit="pagination.limit"
     :total-items="items.length" />
+```
 
-<!-- With Controls -->
+#### With Controls, and 3 range elements
 
+```html
 <PaginatorControls @select="selectPage"
-    :page-range="3"
     :limit="pagination.limit"
     :total-items="items.length" />
+```
 
-<!-- Responsive Paginator -->
+### Responsive Paginator
 
+It will render **page range** items depending on the window size.
+
+```html
 <PaginatorResponsive @select="selectPage"
   :limit="pagination.limit"
   :total-items="items.length" />
+```
+
+### Run
+
+```bash
+npm install
+npm run build
+npm run dev
 ```

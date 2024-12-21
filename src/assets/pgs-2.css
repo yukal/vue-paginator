@@ -1,0 +1,33 @@
+/* STYLE 2 */
+
+.pgs-2 .active {
+    @apply
+
+    text-sm text-gray-800
+
+    bg-gray-200
+    focus:bg-gray-300
+    disabled:opacity-50 disabled:pointer-events-none
+}
+
+.pgs-2 .link {
+    @apply
+
+    text-sm text-gray-800
+
+    hover:bg-gray-100 focus:bg-gray-100
+    disabled:opacity-50 disabled:pointer-events-none
+}
+
+.pgs-2 .control {
+    @apply
+
+    text-gray-800
+
+    py-2 px-3.5 gap-x-1.5
+    inline-flex justify-center items-center
+
+    hover:bg-gray-100 focus:outline-none focus:bg-gray-100
+    disabled:opacity-50 disabled:pointer-events-none
+    rounded-lg
+}

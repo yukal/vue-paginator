@@ -1,13 +1,9 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue';
-import { useRoute, useRouter, RouterView } from 'vue-router';
 
 import PaginatorControls from '@/components/PaginatorControls.vue';
 import PaginatorResponsive from '@/components/PaginatorResponsive.vue';
 import Paginator from '@/components/Paginator.vue';
-
-// const route = useRoute();
-// const router = useRouter();
 
 var pagination = ref({
   offset: 0,
@@ -24,6 +20,11 @@ var paginationItems = computed(() => {
 
 function selectPage({ pageNum, limit, offset }) {
   pagination.value.offset = offset;
+}
+
+function deleteItem(n) {
+  // Remove 1 element at index N
+  items.value.splice(n + pagination.value.offset, 1);
 }
 
 onMounted(async () => {
@@ -45,30 +46,36 @@ onMounted(async () => {
       </thead>
 
       <tbody>
-        <tr v-for="item of paginationItems" :key="item" class="odd:bg-white even:bg-gray-100">
+        <tr v-for="(item, n) of paginationItems" :key="item" class="odd:bg-white even:bg-gray-100">
           <td class="text-start">Name {{ item }}</td>
           <td class="text-start">Age {{ item }}</td>
           <td class="text-start">Address {{ item }}</td>
           <td class="text-end">
-            <button type="button" class="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 focus:outline-none focus:text-blue-800 disabled:opacity-50 disabled:pointer-events-none">Delete</button>
+            <button type="button"
+              @click="deleteItem(n)"
+              class="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 focus:outline-none focus:text-blue-800 disabled:opacity-50 disabled:pointer-events-none">Delete</button>
           </td>
         </tr>
       </tbody>
     </table>
 
     <!-- Without Controls -->
-    <Paginator @select="selectPage"
+    <Paginator @select="selectPage" class="paginator pgs-1"
       :page-range="5"
       :limit="pagination.limit"
       :total-items="items.length" />
 
     <!-- With Controls -->
-    <PaginatorControls @select="selectPage"
+    <PaginatorControls @select="selectPage" class="paginator pgs-2"
+      :limit="pagination.limit"
+      :total-items="items.length" />
+
+    <PaginatorControls @select="selectPage" class="paginator-4 pgs-4"
       :limit="pagination.limit"
       :total-items="items.length" />
 
     <!-- Responsive Paginator -->
-    <PaginatorResponsive @select="selectPage"
+    <PaginatorResponsive @select="selectPage" class="paginator pgs-3"
       :limit="pagination.limit"
       :total-items="items.length" />
 

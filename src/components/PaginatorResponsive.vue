@@ -134,17 +134,15 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <nav class="flex justify-center items-center gap-x-2 font-mono my-4" aria-label="Pagination">
+  <nav aria-label="Pagination">
 
     <template v-for="page in pages">
-      <span v-if="page === -1" class="py-2 flex justify-center items-center text-gray-500">{{ separatorText }}</span>
+      <span v-if="page === -1" class="separator">{{ separatorText }}</span>
 
-      <span v-else-if="page === pageNum"
-        class="py-2 px-3 flex justify-center items-center bg-gray-200 text-gray-800 text-sm rounded-lg focus:outline-none focus:bg-gray-300 disabled:opacity-50 disabled:pointer-events-none"
+      <span v-else-if="page === pageNum" class="active"
         :tabindex="page" :aria-current="page">{{ page }}</span>
 
-      <RouterLink v-else :to="toPageNum(page)"
-        class="py-2 px-3 flex justify-center items-center text-blue-700 hover:text-blue-500 text-sm rounded-lg focus:outline-none disabled:opacity-50 disabled:pointer-events-none"
+      <RouterLink v-else :to="toPageNum(page)" class="link"
         :tabindex="page" :aria-current="page">{{ page }}</RouterLink>
     </template>
 
