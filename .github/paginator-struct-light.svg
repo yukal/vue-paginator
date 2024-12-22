@@ -84,27 +84,27 @@
   <line x1="402.5" y1="218" x2="427.5" y2="218" />
   <line x1="415" y1="120" x2="415" y2="218" />
 
-	<line x1="26.5" y1="339" x2="40.5" y2="339" />
-	<line x1="33.5" y1="339" x2="33.5" y2="436" />
-	<line x1="33.5" y1="436" x2="314" y2="436" />
+  <line x1="26.5" y1="339" x2="40.5" y2="339" />
+  <line x1="33.5" y1="339" x2="33.5" y2="436" />
+  <line x1="33.5" y1="436" x2="314" y2="436" />
 
-	<line x1="789.5" y1="339" x2="803.5" y2="339" />
-	<line x1="796.5" y1="339" x2="796.5" y2="436" />
-	<line x1="796.5" y1="436" x2="516" y2="436" />
+  <line x1="789.5" y1="339" x2="803.5" y2="339" />
+  <line x1="796.5" y1="339" x2="796.5" y2="436" />
+  <line x1="796.5" y1="436" x2="516" y2="436" />
 
-	<rect class="box-ctrls" width="65" height="65" y="240" x="1" />
-	<rect class="box-static" width="65" height="65" y="240" x="84" />
-	<rect class="box-range" width="405" height="65" y="240" x="212.5" />
-	<rect class="box-static" width="65" height="65" y="240" x="681" />
-	<rect class="box-ctrls" width="65" height="65" y="240" x="764" />
+  <rect class="box-ctrls" width="65" height="65" y="240" x="1" />
+  <rect class="box-static" width="65" height="65" y="240" x="84" />
+  <rect class="box-range" width="405" height="65" y="240" x="212.5" />
+  <rect class="box-static" width="65" height="65" y="240" x="681" />
+  <rect class="box-ctrls" width="65" height="65" y="240" x="764" />
 
-	<text xml:space="preserve" class="link" x="419" y="278"
+  <text xml:space="preserve" class="link" x="419" y="278"
     text-anchor="middle" word-spacing="36.5">1   13 14 15 16 17   30</text>
 
-	<text xml:space="preserve" class="sepr" x="415" y="278"
+  <text xml:space="preserve" class="sepr" x="415" y="278"
     text-anchor="middle" word-spacing="450">… …</text>
 
-	<text xml:space="preserve" class="controls" x="415" y="278"
+  <text xml:space="preserve" class="controls" x="415" y="278"
     text-anchor="middle" word-spacing="240">‹   ›</text>
 
 </svg>

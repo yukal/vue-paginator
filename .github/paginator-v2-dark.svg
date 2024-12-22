@@ -21,9 +21,9 @@
   }
   </style>
 
-	<rect width="50" height="50" x="390" y="12.5" rx="8" ry="8" />
+  <rect width="50" height="50" x="390" y="12.5" rx="8" ry="8" />
 
-	<text xml:space="preserve" class="link" x="420" y="44"
+  <text xml:space="preserve" class="link" x="420" y="44"
     text-anchor="middle" word-spacing="30">‹ 1  14 15 16  30 ›</text>
 
   <text xml:space="preserve" class="sepr" x="415" y="44"
