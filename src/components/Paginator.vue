@@ -1,5 +1,5 @@
 <script setup>
-import { RouterLink, useRoute, useRouter } from 'vue-router';
+import { RouterLink, useRoute } from 'vue-router';
 import { computed, ref, watch } from 'vue';
 
 var props = defineProps({
@@ -26,9 +26,10 @@ var props = defineProps({
 });
 
 var emit = defineEmits(['select']);
-
 var route = useRoute();
-var router = useRouter();
+
+var showLeftSeparator = ref(false);
+var showRightSeparator = ref(false);
 
 var totalPages = computed(() => Math.ceil(props.totalItems / props.limit));
 var pageNum = ref(
@@ -67,15 +68,10 @@ var pages = computed(() => {
     var range = Array.from({ length: rangeEnd - rangeStart + 1 },
       (_, i) => i + rangeStart);
 
-    items = [1, ...range, totalPages.value];
+    items = [1, -1, ...range, -2, totalPages.value];
 
-    if (rangeStart > min) {
-      items.splice(1, 0, -1);
-    }
-
-    if (rangeEnd < max) {
-      items.splice(items.length - 1, 0, -1);
-    }
+    showLeftSeparator.value = rangeStart > min;
+    showRightSeparator.value = rangeEnd < max;
   }
 
   return items;
@@ -106,10 +102,14 @@ watch(() => route.query[props.pageArgument], (newPageNum) => {
 </script>
 
 <template>
-  <nav aria-label="Pagination">
+  <nav v-if="pages.length > 0" aria-label="Pagination">
 
     <template v-for="page in pages">
-      <span v-if="page === -1" class="separator">{{ separatorText }}</span>
+      <span v-if="page === -1" class="separator" 
+        :class="{ on: showLeftSeparator }">{{ separatorText }}</span>
+
+      <span v-else-if="page === -2" class="separator" 
+        :class="{ on: showRightSeparator }">{{ separatorText }}</span>
 
       <span v-else-if="page === pageNum" class="active"
         :tabindex="page" :aria-current="page">{{ page }}</span>
