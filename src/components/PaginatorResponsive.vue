@@ -131,7 +131,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <nav aria-label="Pagination">
+  <nav v-if="pages.length > 0" aria-label="Pagination">
 
     <template v-for="page in pages">
       <span v-if="page === -1" class="separator" 

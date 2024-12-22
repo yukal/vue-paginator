@@ -110,7 +110,7 @@ watch(() => route.query[props.pageArgument], (newPageNum) => {
 </script>
 
 <template>
-  <nav aria-label="Pagination">
+  <nav v-if="pages.length > 0" aria-label="Pagination">
     <RouterLink v-if="pageNum >= 2" :to="toPageNum(pageNum - 1)" class="control">
       {{ textPrev }}
     </RouterLink>
