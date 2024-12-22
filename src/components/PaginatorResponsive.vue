@@ -22,8 +22,10 @@ var props = defineProps({
 });
 
 var emit = defineEmits(['select']);
-
 var route = useRoute();
+
+var showLeftSeparator = ref(false);
+var showRightSeparator = ref(false);
 
 var pageRange = ref(3);
 var totalPages = computed(() => Math.ceil(props.totalItems / props.limit));
@@ -63,15 +65,10 @@ var pages = computed(() => {
     var range = Array.from({ length: rangeEnd - rangeStart + 1 },
       (_, i) => i + rangeStart);
 
-    items = [1, ...range, totalPages.value];
+    items = [1, -1, ...range, -2, totalPages.value];
 
-    if (rangeStart > min) {
-      items.splice(1, 0, -1);
-    }
-
-    if (rangeEnd < max) {
-      items.splice(items.length - 1, 0, -1);
-    }
+    showLeftSeparator.value = rangeStart > min;
+    showRightSeparator.value = rangeEnd < max;
   }
 
   return items;
@@ -137,7 +134,11 @@ onBeforeUnmount(() => {
   <nav aria-label="Pagination">
 
     <template v-for="page in pages">
-      <span v-if="page === -1" class="separator">{{ separatorText }}</span>
+      <span v-if="page === -1" class="separator" 
+        :class="{ on: showLeftSeparator }">{{ separatorText }}</span>
+
+      <span v-else-if="page === -2" class="separator" 
+        :class="{ on: showRightSeparator }">{{ separatorText }}</span>
 
       <span v-else-if="page === pageNum" class="active"
         :tabindex="page" :aria-current="page">{{ page }}</span>

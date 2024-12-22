@@ -3,13 +3,12 @@
 .paginator {
     @apply
 
-    my-4 gap-x-2
+    my-4 gap-x-1
     flex justify-center items-center
 
     font-mono
 }
 
-.paginator .separator,
 .paginator .active,
 .paginator .link {
     @apply
@@ -20,8 +19,23 @@
     rounded-lg
 }
 
-.paginator .separator {
-    @apply text-gray-500
+.separator {
+    @apply
+
+    text-gray-500
+
+    flex justify-center items-center
+    focus:outline-none
+
+    w-0 h-fit px-0 py-2 opacity-0
+    transition-po ease-out duration-500
+}
+
+.separator.on {
+    @apply
+
+    w-fit px-1.5 opacity-100
+    transition-po ease-out duration-500
 }
 
 .paginator .control.disabled {

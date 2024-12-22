@@ -9,4 +9,11 @@ export default {
     ],
     darkMode: 'media',
     plugins: [forms],
+    theme: {
+        extend: {
+            transitionProperty: {
+                'po': 'padding, opacity',
+            },
+        },
+    },
 };
